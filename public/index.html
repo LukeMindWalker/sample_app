@@ -57,60 +57,19 @@
         padding-right: 30px;
       }
 
-
       #header {
         background-repeat: no-repeat;
         background-position: top left;
         height: 64px;
       }
+	  
       #header h1, #header h2 {margin: 0}
       #header h2 {
         color: #888;
         font-weight: normal;
         font-size: 16px;
       }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
+	  
 	  #coming_soon h2 {
           margin: 0;
           font-size: 14px;
@@ -118,7 +77,7 @@
           color: #0000FF;
           margin-bottom: 25px;
 	  }
-
+	  
       #under_construction {
         border-top: 1px solid #ccc;
         margin-top: 25px;
@@ -134,6 +93,7 @@
         font-weight: normal;
         color: #333;
         margin-bottom: 25px;
+		font-style: italic;
       }
       #under_construction ol {
         margin-left: 0;
@@ -150,11 +110,11 @@
         font-size: 18px;
         color: #333;
       }
+	  
       #under_construction li p {
         color: #555;
         font-size: 13px;
       }
-
 
       #sidebar ul {
         margin-left: 0;
@@ -177,19 +137,6 @@
         font-style: italic;
       }
     </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
   </head>
   <body>
     <div id="page">
@@ -213,9 +160,8 @@
         </div>
 
         <div id="about">
-          <h2>Even the longest journey starts with a single step...</h2>
+          <h2><i>Even the longest journey starts with a single step...</i></h2>
         </div>
-
 	  	<div id="coming_soon" align="center">
 		  <img src="assets/UnderContruction.png"/>
   		</div>
